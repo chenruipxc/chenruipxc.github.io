@@ -146,6 +146,66 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/02/qq%E6%B6%88%E6%81%AF%E8%BD%B0%E7%82%B8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/QQ%E5%9B%BE%E7%89%8720191124160521.jpg">
+      <meta itemprop="name" content="阿斯伯格患者">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="最帅の春春">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/05/02/qq%E6%B6%88%E6%81%AF%E8%BD%B0%E7%82%B8/" class="post-title-link" itemprop="url">qq消息轰炸</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-05-02 19:13:30 / 修改时间：17:37:53" itemprop="dateCreated datePublished" datetime="2020-05-02T19:13:30+08:00">2020-05-02</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h3><p>将对话框打开，输入好友备注，和消息内容，选择轰炸次数<br>瞎几把玩</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> tkinter <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"><span class="keyword">import</span> win32gui</span><br><span class="line"><span class="keyword">import</span> win32con</span><br><span class="line"><span class="keyword">import</span> win32clipboard <span class="keyword">as</span> w</span><br><span class="line"></span><br><span class="line">window = tk.Tk()</span><br><span class="line"></span><br><span class="line">window.title(<span class="string">'QQ信息轰炸'</span>)</span><br><span class="line"></span><br><span class="line">window.geometry(<span class="string">'500x300'</span>)</span><br><span class="line"></span><br><span class="line">e1 = tk.Label(window, text=<span class="string">'纯属娱乐，不要恶搞'</span>, bg=<span class="string">'green'</span>, font=(<span class="string">'Arial'</span>, <span class="number">12</span>)).grid(row=<span class="number">0</span>, column=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">e3 = tk.Label(window, text=<span class="string">'请输入循环次数'</span>, font=(<span class="string">'Arial'</span>, <span class="number">12</span>)).grid(row=<span class="number">1</span>, column=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">e4 = tk.Label(window, text=<span class="string">'请输入QQ备注名'</span>, font=(<span class="string">'Arial'</span>, <span class="number">12</span>)).grid(row=<span class="number">2</span>, column=<span class="number">0</span>)</span><br><span class="line">e5 = tk.Label(window, text=<span class="string">'请输入发送内容'</span>, font=(<span class="string">'Arial'</span>, <span class="number">12</span>)).grid(row=<span class="number">3</span>, column=<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hit_me</span><span class="params">()</span>:</span></span><br><span class="line">    n = int(N.get())  <span class="comment"># 请输入循环次数</span></span><br><span class="line">    <span class="comment"># print(a)</span></span><br><span class="line">    name = Name.get()  <span class="comment"># 请输入QQ备注名</span></span><br><span class="line">    mgs = Mgs.get()  <span class="comment"># 请输入发送内容</span></span><br><span class="line"></span><br><span class="line">    w.OpenClipboard()</span><br><span class="line">    w.EmptyClipboard()</span><br><span class="line">    w.SetClipboardData(win32con.CF_UNICODETEXT, mgs)</span><br><span class="line">    w.CloseClipboard()</span><br><span class="line">    <span class="comment"># 获取窗口句柄</span></span><br><span class="line">    handle = win32gui.FindWindow(<span class="literal">None</span>, name)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, n):</span><br><span class="line">        <span class="comment"># 填充消息</span></span><br><span class="line">        win32gui.SendMessage(handle, <span class="number">770</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">        <span class="comment"># 回车发送消息</span></span><br><span class="line">        win32gui.SendMessage(handle, win32con.WM_KEYDOWN, win32con.VK_RETURN, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = StringVar()</span><br><span class="line">Name = StringVar()</span><br><span class="line">Mgs = StringVar()</span><br><span class="line"></span><br><span class="line">e2 = tk.Entry(window, textvariable=N, font=(<span class="string">'Arial'</span>, <span class="number">10</span>)).grid(row=<span class="number">1</span>, column=<span class="number">2</span>)  <span class="comment"># 显示成明文形式</span></span><br><span class="line">e6 = tk.Entry(window, textvariable=Name, font=(<span class="string">'Arial'</span>, <span class="number">10</span>)).grid(row=<span class="number">2</span>, column=<span class="number">2</span>)</span><br><span class="line">e7 = tk.Entry(window, textvariable=Mgs, font=(<span class="string">'Arial'</span>, <span class="number">10</span>)).grid(row=<span class="number">3</span>, column=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">b = tk.Button(window, text=<span class="string">'轰炸'</span>, font=(<span class="string">'Arial'</span>, <span class="number">12</span>), width=<span class="number">10</span>, height=<span class="number">1</span>, command=hit_me).grid(row=<span class="number">4</span>, column=<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">window.mainloop()</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/02/%E6%8F%90%E5%8F%96%E7%9C%81%E4%BB%BD%E8%B6%85%E9%93%BE%E6%8E%A5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -853,7 +913,7 @@ sex : 男</code></pre><h3 id="get-获取键对应的值，没有这个键则返�
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
