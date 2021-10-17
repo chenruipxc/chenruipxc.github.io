@@ -11239,6 +11239,7 @@ footer.footer .level-end .field {
   }
 }
 figure.highlight {
+  background: #060600;
   padding: 0;
   width: 100%;
   position: relative;
@@ -11249,11 +11250,11 @@ figure.highlight.folded .highlight-body {
   height: 0;
 }
 figure.highlight .copy {
-  opacity: 0.7;
+  opacity: 1;
 }
 figure.highlight pre,
 figure.highlight table tr:hover {
-  color: inherit;
+  color: #8aa89d;
   background: transparent;
 }
 figure.highlight table {
